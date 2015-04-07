@@ -1,4 +1,4 @@
-## Multi-touch library (scale, rotate, drag) for mobile and web.
+## Multi-touch library (scale, rotate, drag) for mobile
 
 HTML/CSS: http://codepen.io/hanseklund/pen/izloq
 

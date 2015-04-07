@@ -85,7 +85,6 @@ var much = (function () {
 			elementHTML.addEventListener('pointerdown', pointerDownHandler, false);
 		} else {
 			elementHTML.addEventListener('touchstart', onTouchStart);
-			elementHTML.addEventListener('mousedown', onPlateMouseDown);
 		}
 
 		setElement(elementId);
@@ -116,10 +115,6 @@ var much = (function () {
 		stop();
 	}
 
-	toomuch.data = function() {
-		return elements;
-	}
-
 	function stop() {
 		stopAnimationFrame();
 		elements = [];
@@ -146,44 +141,6 @@ var much = (function () {
 				break;
 			}
 		}
-	}
-
-	function onPlateMouseDown(event) {
-		elementId = this.id;
-		setElement(elementId);
-
-		var element = document.getElementById(elementId);
-
-		document.addEventListener('mousemove', onDocumentMouseMove);
-		document.addEventListener('mouseup', onDocumentMouseUp);
-
-		if(event.shiftKey === true) {
-			//assume second touchpoint is in middle of screen
-			handleGestureStart(element.posX, element.posY, event.clientX, event.clientY);
-		} else {
-			handleGestureStop();
-			handleDragStart(event.clientX, event.clientY);
-		}
-
-		startAnimationFrame();
-	}
-
-	function onDocumentMouseMove(event) {
-		if(event.shiftKey) {
-			handleGesture(element.posX, element.posY, event.clientX, event.clientY); 
-		} else {
-			handleDragging(event.clientX, event.clientY);
-		}
-	}
-
-	function onDocumentMouseUp(event) {
-		document.removeEventListener('mouseup', onDocumentMouseUp);
-		document.removeEventListener('mousemove', onDocumentMouseMove);
-		
-		handleGestureStop();
-			
-		event.preventDefault();
-		element.dragging = false;
 	}
 
 	function onTouchStart(event) {
