@@ -6,7 +6,7 @@ HTML/CSS: http://codepen.io/hanseklund/pen/izloq
 
 JS: 
 
-<code>
+```js
 var options = {  
     element: document.getElementById('id'),  
     currentScale: 0.5,  
@@ -18,12 +18,15 @@ var options = {
 }  
 
 much.start(options);
-</code>
+```
 
+```js
 much.remove(document.getElementById('id'))
+```
 
+```js
 much.stop();
-
+```
 
 Author: Hans Eklund, North Kingdom
 
