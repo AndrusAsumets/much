@@ -7,15 +7,15 @@ HTML/CSS: http://codepen.io/hanseklund/pen/izloq
 JS: 
 
 <code>
-var options = {
-    element: document.getElementById('id'),
-    currentScale: 0.5,
-    minScale: 0.1,
-    maxScale: 10,
-    callback: function(settings) {
-        //to something with it
-    }
-}
+var options = {  
+    element: document.getElementById('id'),  
+    currentScale: 0.5,  
+    minScale: 0.1,  
+    maxScale: 10,  
+    callback: function(settings) {  
+        //to something with it  
+    }  
+}  
 
 much.start(options);
 </code>
