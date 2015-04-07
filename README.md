@@ -1,7 +1,5 @@
 ## Multitouch library (scale, rotate, drag) for HTML5.
 
-Usage:
-
 HTML/CSS: http://codepen.io/hanseklund/pen/izloq
 
 JS: 
