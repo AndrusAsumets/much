@@ -11,11 +11,15 @@ var options = {
     minScale: 0.1,  
     maxScale: 10,  
     callback: function(settings) {  
-        //to something with it  
+        //to something with it
     }  
 }  
 
 much.start(options);
+```
+
+```js
+much.data() // callbacks response
 ```
 
 ```js
