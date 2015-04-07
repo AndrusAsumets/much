@@ -19,7 +19,7 @@ much.start(options);
 ```
 
 ```js
-much.data() // returns settings object for all of the elements
+much.data() // returns settings objects for all of the elements in an array
 ```
 
 ```js
