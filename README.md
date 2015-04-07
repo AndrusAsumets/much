@@ -11,7 +11,7 @@ var options = {
     minScale: 0.1,  
     maxScale: 10,  
     callback: function(settings) {  
-        //to something with it
+        //returns settings object for the element 60 frames per second
     }  
 }  
 
@@ -19,7 +19,7 @@ much.start(options);
 ```
 
 ```js
-much.data() // callbacks response
+much.data() // returns settings object for all of the elements
 ```
 
 ```js
@@ -32,4 +32,4 @@ much.stop();
 
 Author: Hans Eklund, North Kingdom
 
-Modified, improved and packaged into a JavaScript library by Andrus Asumets
+Modified, improved and packaged into a JavaScript library by Andrus Asumets.
