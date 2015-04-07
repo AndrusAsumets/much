@@ -65,7 +65,7 @@ var much = (function () {
         clientY: 0
     }
 
-	toomuch.start = function (options) {
+	toomuch.add = function (options) {
 		if('transform' in document.body.style) {
 			prefixedTransform = 'transform';
 		} else if('webkitTransform' in document.body.style) {

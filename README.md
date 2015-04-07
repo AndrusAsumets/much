@@ -15,7 +15,7 @@ var options = {
     }  
 }  
 
-much.start(options);
+much.add(options);
 ```
 
 ```js
