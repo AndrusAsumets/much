@@ -1,6 +1,6 @@
-Multitouch library (scale, rotate, drag) for HTML5.
+# Multitouch library (scale, rotate, drag) for HTML5.
 
-Usage:
+## Usage:
 
 HTML/CSS: http://codepen.io/hanseklund/pen/izloq
 
@@ -28,6 +28,6 @@ much.remove(document.getElementById('id'))
 much.stop();
 ```
 
-Author: Hans Eklund, North Kingdom
+## Author: Hans Eklund, North Kingdom
 
-Modified, improved and packaged into a JavaScript library by Andrus Asumets
+## Modified, improved and packaged into a JavaScript library by Andrus Asumets
