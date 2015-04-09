@@ -5,7 +5,10 @@
 
     var div = document.createElement('div');
     div.id = 'div';
-    div.innerHTML = 'Click. Drag. Pinch. Rotate. Click...';
+
+    var span = document.createElement('span');
+    span.innerHTML = 'Click. Drag. Pinch. Rotate. Click...';
+    div.appendChild(span);
 
     body.appendChild(div);
     div.addEventListener('click', drawImage);
