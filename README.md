@@ -2,18 +2,18 @@
 
 HTML/CSS: http://codepen.io/hanseklund/pen/izloq
 
-JS: 
+JS:
 
 ```js
-var options = {  
-    element: document.getElementById('id'),  
-    currentScale: 0.5,  
-    minScale: 0.1,  
-    maxScale: 10,  
-    callback: function(settings) {  
+var options = {
+    element: document.getElementById('id'),
+    currentScale: 0.5,
+    minScale: 0.1,
+    maxScale: 10,
+    callback: function(settings) {
         //returns settings object for the element 60 frames per second
-    }  
-}  
+    }
+}
 
 much.add(options);
 ```
