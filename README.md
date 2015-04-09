@@ -2,7 +2,7 @@
 
 Demo (on mobile only): http://andrusasumets.github.io/much/
 
-JS:
+USAGE:
 
 ```js
 var options = {
@@ -10,6 +10,7 @@ var options = {
     currentScale: 0.5,
     minScale: 0.1,
     maxScale: 10,
+    easing: 0.8,
     callback: function(settings) {
         //returns settings object for the element 60 frames per second
     }
