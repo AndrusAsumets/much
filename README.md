@@ -1,6 +1,6 @@
 ## Javascript multi-touch library (scale, rotate, drag) for mobile
 
-HTML/CSS: http://codepen.io/hanseklund/pen/izloq
+Demo (on mobile only): http://andrusasumets.github.io/much/
 
 JS:
 
