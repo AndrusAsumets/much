@@ -2,8 +2,6 @@
 
 Demo (on mobile only): http://andrusasumets.github.io/much/
 
-USAGE:
-
 ```js
 var options = {
     element: document.getElementById('id'),
