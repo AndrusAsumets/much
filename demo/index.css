@@ -4,9 +4,12 @@ body, #div {
     height: 100%;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 5vw;
-    text-align: center;
-    vertical-align: middle;
     overflow: hidden;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
 }
 
 #GitHub {
