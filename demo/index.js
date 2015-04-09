@@ -31,8 +31,6 @@
 
             var options = {
                 element: canvas,
-                containerWidth: event.clientX,
-                containerHeight: event.clientY,
                 currentScale: 0.5,
                 minScale: 0.1,
                 maxScale: 5,
