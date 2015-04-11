@@ -124,6 +124,10 @@ var much = (function () {
 			stopAnimationFrame();
 		}
 	}
+	
+	toomuch.data = function() {		
+-		return elements;		
+-	}
 
 	function merge_options(obj1,obj2) {
 	    var obj3 = {};
