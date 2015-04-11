@@ -126,8 +126,8 @@ var much = (function () {
 	}
 	
 	toomuch.data = function() {		
--		return elements;		
--	}
+		return elements;		
+	}
 
 	function merge_options(obj1,obj2) {
 	    var obj3 = {};
