@@ -94,7 +94,11 @@ var much = (function () {
 	}
 
 	toomuch.stop = function() {
-		stop();
+		stopAnimationFrame();
+		elements = [];
+		elementId = null;
+		element = {};
+		index = 0;
 	}
 
 	toomuch.remove = function(element) {
@@ -112,15 +116,13 @@ var much = (function () {
 			}
 		}
 
-		stop();
-	}
-
-	function stop() {
-		stopAnimationFrame();
-		elements = [];
-		elementId = null;
-		element = {};
-		index = 0;
+		if (elements.length > 0) {
+			elementId = elements[index].element.id;
+			setElement(elementId);	
+		}
+		else {
+			stopAnimationFrame();
+		}
 	}
 
 	function merge_options(obj1,obj2) {
@@ -325,7 +327,7 @@ var much = (function () {
 		}
 
 		//set the transform
-		elementHTML.style[prefixedTransform] = 'translate(' + element.posX + 'px,' + element.posY + 'px) rotate(' + element.currentRotation + 'deg) scale(' + element.currentScale + ') translateZ(0)';
+		elementHTML.style[prefixedTransform] = 'translate(' + element.posX + 'px,' + element.posY + 'px) rotate(' + element.currentRotation + 'deg) scale(' + element.currentScale + ')';
 
 		element.velocityX = element.velocityX * element.easing;
 		element.velocityY = element.velocityY * element.easing;
