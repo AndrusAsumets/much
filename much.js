@@ -250,6 +250,9 @@ var much = (function () {
 	}
 
 	function handleDragStart(x, y) {
+		//fix the freeze bug
+		for (i = 0; i < elements.length; i++) { elements[i].dragging = false };
+		
 		element.dragging = true;
 		element.dragX = x;
 		element.dragY = y;
