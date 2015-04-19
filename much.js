@@ -36,8 +36,6 @@ var much = (function () {
     	element: null,
         currentScale: 0.5,
         currentRotation: 0,
-        containerWidth: 600,
-        containerHeight: 400,
         minScale: 0.5,
         maxScale: 1.5,
         restrict: false,
@@ -180,11 +178,14 @@ var much = (function () {
 
 	function onTouchEnd(event) {
 		if(event.touches.length === 0 && element.dragging) {
-			element.dragging = false;
+			//fix the freeze bug
+			for (i = 0; i < elements.length; i++) { elements[i].dragging = false }; 
 
 			document.removeEventListener('touchmove', onTouchMove);
 			document.removeEventListener('touchend', onTouchEnd);
 			document.removeEventListener('touchcancel', onTouchEnd);
+			window.removeEventListener('pointermove', pointerMoveHandler, false);
+			window.removeEventListener('pointerup', pointerUpHandler, false);
 		} else if(event.touches.length === 1) {
 			handleGestureStop();
 			handleDragStart(event.touches[0].clientX, event.touches[0].clientY);
@@ -250,9 +251,7 @@ var much = (function () {
 	}
 
 	function handleDragStart(x, y) {
-		//fix the freeze bug
-		for (i = 0; i < elements.length; i++) { elements[i].dragging = false };
-		
+
 		element.dragging = true;
 		element.dragX = x;
 		element.dragY = y;
@@ -315,7 +314,6 @@ var much = (function () {
 		if(elements.length === 0) { return };
 
 		var elementHTML = document.getElementById(elementId);
-		element = element
 
 		if(element.dragdDX !== 0) element.velocityX = element.dragdDX;
 		if(element.dragdDY !== 0) element.velocityY = element.dragdDY;
