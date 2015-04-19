@@ -178,8 +178,7 @@ var much = (function () {
 
 	function onTouchEnd(event) {
 		if(event.touches.length === 0 && element.dragging) {
-			//fix the freeze bug
-			for (i = 0; i < elements.length; i++) { elements[i].dragging = false }; 
+			element.dragging = false;
 
 			document.removeEventListener('touchmove', onTouchMove);
 			document.removeEventListener('touchend', onTouchEnd);
@@ -187,9 +186,6 @@ var much = (function () {
 		} else if(event.touches.length === 1) {
 			handleGestureStop();
 			handleDragStart(event.touches[0].clientX, event.touches[0].clientY);
-
-			for (i = 0; i < elements.length; i++) { elements[i].dragging = false }; 
-
 		}
 
 		return true;
@@ -252,6 +248,8 @@ var much = (function () {
 	}
 
 	function handleDragStart(x, y) {
+		//fix the freeze bug
+		for (i = 0; i < elements.length; i++) { elements[i].dragging = false }; 
 
 		element.dragging = true;
 		element.dragX = x;
