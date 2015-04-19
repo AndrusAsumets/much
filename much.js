@@ -184,11 +184,12 @@ var much = (function () {
 			document.removeEventListener('touchmove', onTouchMove);
 			document.removeEventListener('touchend', onTouchEnd);
 			document.removeEventListener('touchcancel', onTouchEnd);
-			window.removeEventListener('pointermove', pointerMoveHandler, false);
-			window.removeEventListener('pointerup', pointerUpHandler, false);
 		} else if(event.touches.length === 1) {
 			handleGestureStop();
 			handleDragStart(event.touches[0].clientX, event.touches[0].clientY);
+
+			for (i = 0; i < elements.length; i++) { elements[i].dragging = false }; 
+
 		}
 
 		return true;
